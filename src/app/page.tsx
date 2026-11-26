@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { ArrowDown, ArrowRight, ArrowUpRight, BadgeCheck, BookOpen, Check, ChevronDown, Clock3, GraduationCap, Instagram, MapPin, Menu, MessageCircle, Play, Sparkles, Star, Users, X, Youtube } from 'lucide-react';
 
 const programs = [
-  { name: 'Dasher', age: '3–6 tahun', detail: 'Langkah pertama belajar Inggris lewat cerita, lagu, dan permainan.', tone: 'peach', emoji: '🧸', tag: 'Little learners' },
-  { name: 'Runner', age: '7–10 tahun', detail: 'Bangun kosakata dan berani ngobrol lewat aktivitas seru.', tone: 'blue', emoji: '🚀', tag: 'Young explorers' },
-  { name: 'Sprinter', age: '11–14 tahun', detail: 'Asah komunikasi, kreativitas, dan percaya diri di setiap sesi.', tone: 'lilac', emoji: '🎧', tag: 'Curious minds' },
-  { name: 'Ranger', age: '15–18 tahun', detail: 'Siap menghadapi sekolah, dunia nyata, dan kesempatan global.', tone: 'mint', emoji: '🌍', tag: 'Future ready' },
+  { name: 'Dasher', age: '3–6 tahun', detail: 'Langkah pertama belajar Inggris lewat cerita, lagu, dan permainan.', tone: 'peach', emoji:, tag: 'Little learners' },
+  { name: 'Runner', age: '7–10 tahun', detail: 'Bangun kosakata dan berani ngobrol lewat aktivitas seru.', tone: 'blue', emoji:, tag: 'Young explorers' },
+  { name: 'Sprinter', age: '11–14 tahun', detail: 'Asah komunikasi, kreativitas, dan percaya diri di setiap sesi.', tone: 'lilac', emoji:, tag: 'Curious minds' },
+  { name: 'Ranger', age: '15–18 tahun', detail: 'Siap menghadapi sekolah, dunia nyata, dan kesempatan global.', tone: 'mint', emoji:, tag: 'Future ready' },
 ];
 
 export default function Home() {
