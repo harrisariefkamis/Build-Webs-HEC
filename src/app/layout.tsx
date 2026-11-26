@@ -1,11 +1,17 @@
 import type { Metadata } from 'next';
-import ContactLinks from '@/components/contact-links';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Haliyora English Course — English for a brighter future',
+  title: 'Haliyora English Course | Kursus Bahasa Inggris Online & Offline',
   description:
-    'Belajar Bahasa Inggris secara Online/Offline hanya di Haliyora English Course. Cukup dengan 100rb saja.',
+    'Kursus Bahasa Inggris interaktif untuk anak, remaja, dewasa, dan profesional. Pilih kelas online, tatap muka, privat, IELTS, atau TOEFL.',
+  openGraph: {
+    title: 'Haliyora English Course',
+    description:
+      'Belajar Bahasa Inggris dari dasar dengan kelas online dan tatap muka untuk setiap usia.',
+    type: 'website',
+    locale: 'id_ID',
+  },
 };
 
 export default function RootLayout({
@@ -15,7 +21,6 @@ export default function RootLayout({
     <html lang="id">
       <body>
         {children}
-        <ContactLinks />
       </body>
     </html>
   );

@@ -93,7 +93,7 @@ export default function ContactLinks() {
             </span>
             <div>
               <h3>Kunjungi lokasi kami</h3>
-              <p>Lihat lokasi Haliyora di peta</p>
+              <p>haliyora center</p>
             </div>
           </div>
 
