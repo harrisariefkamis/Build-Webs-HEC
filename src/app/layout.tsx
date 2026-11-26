@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Haliyora English Course — English for a brighter future',
-  description: 'Kursus Bahasa Inggris interaktif untuk anak, remaja, dan dewasa muda. Belajar online atau offline dengan cara yang seru dan percaya diri.',
+  description: 'Belajar Bahasa Inggris secara Online/Offline hanya di Haliyora English Course. Cukup dengan 100rb saja.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
