@@ -29,16 +29,38 @@ npm run start
 
 ```text
 .
-├── public/                 # Aset statis (gambar, ikon, dan berkas publik)
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── docs/
+│   └── README.md
+├── public/
+│   ├── icons/
+│   │   └── README.md
+│   └── images/
+│       └── README.md
 ├── src/
-│   └── app/
-│       ├── globals.css     # Token desain, komponen UI, dan breakpoint responsif
-│       ├── layout.tsx      # Root layout, font, dan metadata SEO
-│       └── page.tsx        # Halaman landing dan konten utama
-├── .eslintrc.json          # Konfigurasi ESLint Next.js
-├── next.config.js          # Konfigurasi Next.js
-├── package.json            # Skrip dan dependensi
-└── tsconfig.json           # Konfigurasi TypeScript
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   └── contact-links.tsx
+│   ├── data/
+│   │   └── README.md
+│   ├── lib/
+│   │   └── README.md
+│   └── types/
+│       └── README.md
+├── tests/
+│   └── README.md
+├── .eslintrc.json
+├── .gitignore
+├── LICENSE
+├── next.config.js
+├── package.json
+├── README.md
+└── tsconfig.json
 ```
 
 ## Teknologi
