@@ -1,6 +1,6 @@
 # Haliyora UI design system
 
-UI follows the supplied Stitch reference and uses semantic CSS classes instead
+UI follows the supplied reference and uses semantic CSS classes instead
 of a runtime Tailwind CDN dependency.
 
 ## Foundations
