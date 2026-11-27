@@ -1,6 +1,6 @@
 # Haliyora English Course
 
-Landing page responsif untuk Haliyora English Course, dibuat dengan Next.js App
+Pengembangan website responsif untuk Haliyora English Course (HEC) yang dirancang dengan Next.js App
 Router, React, TypeScript, dan sistem desain CSS berbasis token.
 
 ## Fitur
