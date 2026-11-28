@@ -6,9 +6,21 @@ export const whatsappUrl = (message: string) =>
 export const contactEmail = 'haliyora@gmail.com';
 
 export type ProgramCategory = 'kids' | 'adult' | 'private';
+export type ProgramTheme =
+  | 'dasher'
+  | 'runner'
+  | 'sprinter'
+  | 'ranger'
+  | 'explorer'
+  | 'ielts'
+  | 'toefl'
+  | 'private'
+  | 'corporate';
 
 export type Program = {
   name: string;
+  image: string;
+  theme: ProgramTheme;
   audience: string;
   format: string;
   category: ProgramCategory;
@@ -16,54 +28,68 @@ export type Program = {
   outcome: string;
 };
 
+const programArtwork = '/icon/icon english-puuzle.png';
+
 export const programs: Program[] = [
   {
     name: 'Dasher',
+    image: programArtwork,
+    theme: 'dasher',
     audience: 'Usia 3–6 tahun',
     format: 'Reguler',
     category: 'kids',
     description:
       'Pengenalan fonik, kosakata dasar, dan keberanian berbicara melalui lagu serta permainan interaktif.',
-    outcome: 'Online & cabang',
+    outcome: 'Online & Offline',
   },
   {
     name: 'Runner',
+    image: programArtwork,
+    theme: 'runner',
     audience: 'Usia 7–10 tahun',
     format: 'Reguler',
     category: 'kids',
     description:
       'Membangun kelancaran membaca, menyusun kalimat, dan percakapan sehari-hari dengan proyek kreatif.',
-    outcome: 'Online & cabang',
+    outcome: 'Online & Offline',
   },
   {
     name: 'Sprinter',
+    image: programArtwork,
+    theme: 'sprinter',
     audience: 'Usia 11–14 tahun',
     format: 'Reguler',
     category: 'kids',
     description:
       'Grammar terapan, presentasi, dan pemahaman bacaan untuk mendukung pelajaran di sekolah.',
-    outcome: 'Online & cabang',
+    outcome: 'Online & Offline',
   },
   {
     name: 'Ranger',
+    image: programArtwork,
+    theme: 'ranger',
     audience: 'Usia 15–18 tahun',
     format: 'Reguler',
     category: 'kids',
     description:
       'Debat, academic writing, dan komunikasi tingkat lanjut untuk pelajar SMA.',
-    outcome: 'Online & cabang',
+    outcome: 'Online & Offline',
   },
   {
     name: 'Explorer',
+    image: programArtwork,
+    theme: 'explorer',
     audience: 'Usia 19–22 tahun',
     format: 'Reguler & privat',
-    category: 'adult',
+    category: 'kids',
     description:
       'Public speaking, wawancara kerja, dan komunikasi akademik untuk mahasiswa dan pencari kerja.',
-    outcome: 'Online & cabang',
+    outcome: 'Online & Offline',
   },
   {
     name: 'IELTS Complete Prep',
+    image: programArtwork,
+    theme: 'ielts',
     audience: 'Usia 15 tahun ke atas',
     format: 'Exam prep',
     category: 'adult',
@@ -73,6 +99,8 @@ export const programs: Program[] = [
   },
   {
     name: 'TOEFL ITP',
+    image: programArtwork,
+    theme: 'toefl',
     audience: 'Usia 15 tahun ke atas',
     format: 'Exam prep',
     category: 'adult',
@@ -82,6 +110,8 @@ export const programs: Program[] = [
   },
   {
     name: 'Private Class',
+    image: programArtwork,
+    theme: 'private',
     audience: 'Explorer & exam prep',
     format: '1-on-1',
     category: 'private',
@@ -91,12 +121,14 @@ export const programs: Program[] = [
   },
   {
     name: 'Corporate English',
+    image: programArtwork,
+    theme: 'corporate',
     audience: 'Perusahaan & tim',
     format: 'In-house / online',
     category: 'private',
     description:
       'Pelatihan komunikasi bisnis, negosiasi, presentasi, dan korespondensi untuk tim perusahaan.',
-    outcome: 'Laporan progres',
+    outcome: 'Jadwal fleksibel',
   },
 ];
 
@@ -108,7 +140,7 @@ export const programCategories: {
   {
     id: 'kids',
     label: 'Anak & remaja',
-    description: 'Program bertahap untuk usia 3–18 tahun.',
+    description: 'Program bertahap untuk anak, remaja, dan dewasa muda.',
   },
   {
     id: 'adult',
@@ -124,25 +156,25 @@ export const programCategories: {
 
 export const testimonials = [
   {
-    name: 'Nadia Aulia',
+    name: 'Riski Akbar Mologotu',
     detail: 'Alumni Pare 3 bulan · IELTS 7.5',
     quote:
       'Awalnya gugup setiap kali harus speaking di kelas. Setelah 3 bulan di Kampung Pare bareng tutor HEC, saya berani presentasi penuh dalam bahasa Inggris.',
-    initials: 'NA',
+    initials: 'RAM',
   },
   {
-    name: 'Bagas Pratama',
+    name: 'Adik Aco',
     detail: 'Alumni Pare 3 bulan · TOEFL 583',
     quote:
-      'Lingkungan camp-nya suportif banget. Setiap hari praktik speaking dan drilling TOEFL ITP, skor saya naik dari 460 jadi 583 dalam tiga bulan.',
-    initials: 'BP',
+      'Lingkungan camp-nya suportif banget. Setiap hari praktik speaking dan,saya bisa lancar speaking.',
+    initials: 'AD',
   },
   {
-    name: 'Clarissa Putri',
+    name: 'Saida Salmin Saragi',
     detail: 'Alumni Pare 3 bulan · Explorer',
     quote:
-      'Programnya terstruktur dan tutornya sabar membimbing dari dasar. Setelah pulang dari Pare, saya lanjut kelas Corporate English untuk persiapan karier.',
-    initials: 'CP',
+      'Programnya terstruktur dan tutornya sabar membimbing dari dasar. Setelah pulang dari Pare, saya lanjut ke perguruan tinggi dan lulus untuk mengasah kemampuan bahasa Inggris saya.',
+    initials: 'SS',
   },
 ];
 

@@ -30,18 +30,6 @@ const questions: { id: string; question: string; answer: ReactNode }[] = [
     ),
   },
   {
-    id: 'exam-prep',
-    question: 'Apakah ada kelas persiapan IELTS dan TOEFL?',
-    answer: (
-      <p>
-        Tersedia program IELTS Complete Prep dan TOEFL ITP untuk usia 15 tahun
-        ke atas.{' '}
-        <a href="#program">Jelajahi program persiapan ujian</a> untuk melihat
-        detail dan mendiskusikan target belajarmu.
-      </p>
-    ),
-  },
-  {
     id: 'private',
     question: 'Bisakah saya mengambil kelas privat?',
     answer: (
@@ -68,38 +56,12 @@ const questions: { id: string; question: string; answer: ReactNode }[] = [
   },
   {
     id: 'pare',
-    question: 'Apa itu program intensif Pare?',
+    question: 'Apa itu program belajar 3 bulan di Kampung Inggris Pare?',
     answer: (
       <p>
         Program ini menawarkan pengalaman belajar intensif selama tiga bulan di
         Kampung Inggris, Pare. Untuk informasi jadwal dan biaya, silakan{' '}
         <a href="#konsultasi">konsultasi dengan tim Haliyora</a>.
-      </p>
-    ),
-  },
-  {
-    id: 'placement',
-    question: 'Bagaimana cara memilih kelas yang tepat?',
-    answer: (
-      <p>
-        Pertimbangkan usia, tujuan belajar, jadwal, dan format kelas yang
-        diinginkan. Tim kami dapat membantu merekomendasikan pilihan—mulai
-        konsultasi melalui{' '}
-        <a href={whatsappUrl('Halo Haliyora, bantu saya memilih kelas Bahasa Inggris yang sesuai.')}>
-          WhatsApp
-        </a>
-        .
-      </p>
-    ),
-  },
-  {
-    id: 'corporate',
-    question: 'Apakah tersedia pelatihan Bahasa Inggris untuk perusahaan?',
-    answer: (
-      <p>
-        Ya. Corporate English menyediakan pelatihan untuk tim, termasuk
-        komunikasi bisnis, negosiasi, presentasi, dan korespondensi.{' '}
-        <a href="#konsultasi">Diskusikan kebutuhan tim Anda</a> dengan Haliyora.
       </p>
     ),
   },

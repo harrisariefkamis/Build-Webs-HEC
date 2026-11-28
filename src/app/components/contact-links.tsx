@@ -11,7 +11,7 @@ import {
 const whatsappUrl =
   'https://api.whatsapp.com/send?phone=6282137209780&text=Assalamualaikum.%0AMr.%20Ismir%20saya%20mau%20mendaftar%20kursus%20bahasa%20Inggris%20di%20HALIYORA%20ENGLISH%20COURSE.';
 
-const socialLinks = [
+export const socialLinks = [
   { label: 'WhatsApp', href: whatsappUrl, icon: MessageCircle },
   { label: 'Email', href: 'mailto:haliyora@gmail.com', icon: Mail },
   {

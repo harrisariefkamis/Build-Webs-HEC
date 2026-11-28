@@ -10,14 +10,14 @@ const navigation = [
     label: 'Tentang',
     items: [
       {
-        href: '#tentang',
+        href: '#profil-company',
         label: 'Profil Company',
         description: 'Kenali pendekatan belajar Haliyora.',
       },
       {
-        href: '#tentang',
-        label: 'Founder & Teamwork',
-        description: 'Pelajari cara tim kami mendampingi siswa.',
+        href: '#teamwork',
+        label: 'Teamwork IT',
+        description: 'Kenali kolaborasi teknologi dan tim Haliyora.',
       },
     ],
   },
@@ -53,17 +53,6 @@ const navigation = [
       },
     ],
   },
-  {
-    id: 'alumni',
-    label: 'Cerita Alumni',
-    items: [
-      {
-        href: '#testimoni',
-        label: 'Testimoni alumni',
-        description: 'Baca cerita dan progres para alumni.',
-      },
-    ],
-  },
 ];
 
 export default function SiteHeader() {
@@ -89,7 +78,7 @@ export default function SiteHeader() {
         <div className="site-header-inner">
           <a className="brand" href="#home" aria-label="Haliyora English Course">
             <Image
-              src="/images/haliyora-mark.png"
+              src="/icon/logo-3-nav-webs.png"
               alt=""
               width={140}
               height={40}
@@ -108,7 +97,11 @@ export default function SiteHeader() {
               setOpenDropdown(null);
             }}
           >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+            {menuOpen ? (
+              <X size={22} aria-hidden="true" />
+            ) : (
+              <Menu size={22} aria-hidden="true" />
+            )}
           </button>
           <nav
             id="primary-navigation"
@@ -173,11 +166,32 @@ export default function SiteHeader() {
               );
             })}
             <a
+              className="nav-direct-link"
+              href="#paket"
+              onClick={closeNavigation}
+            >
+              Paket Belajar
+            </a>
+            <a
+              className="nav-direct-link"
+              href="#testimoni"
+              onClick={closeNavigation}
+            >
+              Cerita Alumni
+            </a>
+            <a
+              className="nav-direct-link"
+              href="#blog"
+              onClick={closeNavigation}
+            >
+              Blog
+            </a>
+            <a
               className="button button-small button-primary nav-cta magnetic-cta"
               href="#konsultasi"
               onClick={closeNavigation}
             >
-              Langganan Sekarang <ArrowUpRight size={16} aria-hidden="true" />
+              Konsultasi Sekarang <ArrowUpRight size={16} aria-hidden="true" />
             </a>
           </nav>
         </div>

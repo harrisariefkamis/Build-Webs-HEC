@@ -7,7 +7,7 @@ import { useRef, useState } from 'react';
 const profiles = [
   {
     image: '/images/founder_hec.jpeg',
-    role: 'Founder HEC',
+    role: 'Founder Haliyora English Course',
     name: 'Ismir A. Maneke',
     description:
       'Membangun lingkungan belajar yang suportif agar siswa dapat berkembang dan percaya diri menggunakan Bahasa Inggris.',
@@ -31,14 +31,14 @@ const profiles = [
     role: 'Software Developer',
     name: 'Rhavi A. Syamsi',
     description:
-      'Mendukung pengalaman belajar digital melalui antarmuka yang informatif, mudah digunakan, dan responsif.',
+      'Membangun pengalaman belajar digital melalui antarmuka yang informatif, mudah digunakan, dan responsif.',
   },
   {
     image: '/images/team_harryyss.jpg',
     role: 'Data Enthusiast',
     name: 'harryyss.arf',
     description:
-      'Berkolaborasi menjaga kebutuhan teknologi dan komunikasi digital tetap sejalan dengan layanan belajar Haliyora.',
+      'Membangun infrastruktur database dan menjaga privasi data untuk menjamin kebutuhan belajar di Haliyora English Course.',
   },
 ];
 

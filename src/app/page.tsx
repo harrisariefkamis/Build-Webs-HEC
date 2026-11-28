@@ -13,61 +13,24 @@ import {
   Target,
   UsersRound,
 } from 'lucide-react';
-import ContactLinks from './components/contact-links';
+import ContactLinks, { socialLinks } from './components/contact-links';
+import BlogSection from './components/blog-section';
+import ConsultationForm from './components/consultation-form';
 import FaqSection from './components/faq-section';
 import ParticleFieldLoader from './components/particle-field-loader';
 import PageAnimations from './components/page-animations';
 import ProgramBrowser from './components/program-browser';
 import PromotionPanel from './components/promotion-panel';
+import ProfilCompany from './components/Profil-Company';
 import SiteHeader from './components/site-header';
 import {
   contactEmail,
-  consultationTopics,
   testimonials,
   whatsappUrl,
 } from '@/data/site-content';
 
 const heroPhoto =
   "/images/Screenshot_26-11-2026_163547_www.instagram.com.jpeg";
-
-const strengths = [
-  {
-    icon: UsersRound,
-    title: 'Tutor yang mendampingi',
-    detail:
-      'Dapatkan arahan dan umpan balik yang membantu setiap siswa bertumbuh.',
-  },
-  {
-    icon: MessageCircle,
-    title: 'Latihan speaking aktif',
-    detail:
-      'Bangun keberanian berbicara melalui praktik dan percakapan.',
-  },
-  {
-    icon: MonitorPlay,
-    title: 'Online & tatap muka',
-    detail:
-      'Pilih cara belajar yang paling sesuai dengan rutinitasmu.',
-  },
-  {
-    icon: GraduationCap,
-    title: 'Program untuk berbagai usia',
-    detail:
-      'Mulai dari kelas anak hingga persiapan untuk kebutuhan profesional.',
-  },
-  {
-    icon: BookOpenCheck,
-    title: 'Modul dan aktivitas interaktif',
-    detail:
-      'Gunakan materi dan latihan untuk mendukung perkembangan di kelas.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Target belajar lebih terarah',
-    detail:
-      'Pilih jalur reguler, privat, ujian, atau program intensif sesuai tujuan.',
-  },
-];
 
 const learningSteps = [
   {
@@ -199,9 +162,9 @@ export default function Home() {
               </div>
               <div className="hero-photo-note">
                 <span className="note-icon"><Sparkles size={18} aria-hidden="true" /></span>
-                <span><strong>Berani mencoba</strong><small>Belajar tanpa takut salah</small></span>
+                <span><strong>Coba aja dulu.!</strong><small>Belajar tanpa takut salah</small></span>
               </div>
-              <span className="hero-sticker" aria-hidden="true">Hello,<br />future!</span>
+              <span className="hero-sticker" aria-hidden="true">Daftar<br />Sekarang.!</span>
               <span className="hero-sparkle sparkle-one" aria-hidden="true">✳</span>
               <span className="hero-sparkle sparkle-two" aria-hidden="true">✦</span>
             </div>
@@ -229,7 +192,38 @@ export default function Home() {
               </p>
             </div>
             <div className="bento-grid">
-              {strengths.map(({ icon: Icon, title, detail }, index) => (
+              {[
+                {
+                  icon: UsersRound,
+                  title: 'Tutor yang mendampingi',
+                  detail: 'Dapatkan arahan dan umpan balik yang membantu setiap siswa bertumbuh.',
+                },
+                {
+                  icon: MessageCircle,
+                  title: 'Latihan speaking aktif',
+                  detail: 'Bangun keberanian berbicara melalui praktik dan percakapan.',
+                },
+                {
+                  icon: MonitorPlay,
+                  title: 'Online & tatap muka',
+                  detail: 'Pilih cara belajar yang paling sesuai dengan rutinitasmu.',
+                },
+                {
+                  icon: GraduationCap,
+                  title: 'Program untuk berbagai usia',
+                  detail: 'Mulai dari kelas anak hingga persiapan untuk kebutuhan profesional.',
+                },
+                {
+                  icon: BookOpenCheck,
+                  title: 'Modul dan aktivitas interaktif',
+                  detail: 'Gunakan materi dan latihan untuk mendukung perkembangan di kelas.',
+                },
+                {
+                  icon: ShieldCheck,
+                  title: 'Target belajar lebih terarah',
+                  detail: 'Pilih jalur reguler, privat, ujian, atau program intensif sesuai tujuan.',
+                },
+              ].map(({ icon: Icon, title, detail }, index) => (
                 <article
                   className={`feature-card feature-card-${index + 1}`}
                   key={title}
@@ -245,6 +239,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <ProfilCompany />
 
         <section className="showcase-section section-space" id="showcase">
           <div className="section-container showcase-content">
@@ -424,11 +420,14 @@ export default function Home() {
           </div>
         </section>
 
+        <BlogSection />
+
         <section className="consultation-section section-space" id="konsultasi">
           <div className="section-container consultation-layout">
             <div className="consultation-copy">
               <span className="eyebrow eyebrow-on-color">
-                <GraduationCap size={16} aria-hidden="true" /> YOUR NEXT STEP STARTS HERE
+                <GraduationCap size={16} aria-hidden="true" />
+                KONSULTASI BERSAMA HEC
               </span>
               <h2>Haiya, kami siap <span>membantu.</span></h2>
               <p>
@@ -449,26 +448,12 @@ export default function Home() {
               <div className="consultation-card-heading">
                 <span className="consultation-avatar"><MessageCircle size={19} aria-hidden="true" /></span>
                 <span><strong>Konsultasi Haliyora</strong><small>Tim kami siap membantu</small></span>
-                <span className="online-indicator">Online</span>
+                <span className="online-indicator">WhatsApp</span>
               </div>
               <p className="consultation-prompt">
-                Hai! Pilih topik untuk mulai bertanya kepada tim kami:
+                Isi data singkat agar tim kami dapat memahami kebutuhanmu:
               </p>
-              <div className="consultation-topics">
-                {consultationTopics.map((topic) => (
-                  <a
-                    href={whatsappUrl(`Halo Haliyora, saya ingin bertanya: ${topic}.`)}
-                    key={topic}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {topic} <ArrowUpRight size={14} aria-hidden="true" />
-                  </a>
-                ))}
-              </div>
-              <p className="consultation-disclaimer">
-                Konsultasi dilanjutkan langsung dengan tim melalui WhatsApp.
-              </p>
+              <ConsultationForm />
             </div>
           </div>
         </section>
@@ -480,43 +465,76 @@ export default function Home() {
       <footer className="site-footer">
         <div className="section-container footer-main">
           <div className="footer-brand">
-            <a className="brand brand-footer" href="#home" aria-label="Kembali ke atas">
+            <a className="brand brand-footer" href="#home">
               <Image
-                src="/images/haliyora-mark.png"
+                src="/icon/logo-3-nav-webs.png"
                 alt="Haliyora English Course"
                 width={140}
                 height={40}
               />
             </a>
             <p>
-              Kursus Bahasa Inggris interaktif untuk tumbuh, berani mencoba,
+              Platform Kursus Bahasa Inggris interaktif untuk tumbuh, berani mencoba,
               dan melangkah lebih jauh.
             </p>
+            <nav className="footer-socials" aria-labelledby="footer-socials-title">
+              <span className="footer-social-label" id="footer-socials-title">
+                Ikuti Kami
+              </span>
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith('mailto:') ? undefined : '_blank'}
+                  rel={href.startsWith('mailto:') ? undefined : 'noreferrer'}
+                  aria-label={label}
+                  title={label}
+                >
+                  <Icon size={17} aria-hidden="true" />
+                </a>
+              ))}
+            </nav>
           </div>
-          <div className="footer-column">
-            <strong>Jelajahi</strong>
-            <a href="#tentang">Tentang Haliyora</a>
-            <a href="#showcase">Alur belajar</a>
-            <a href="#program">Program belajar</a>
-            <a href="#paket">Paket belajar</a>
-            <a href="#promo">Promo</a>
-            <a href="#testimoni">Cerita alumni</a>
-          </div>
-          <div className="footer-column">
-            <strong>Hubungi kami</strong>
-            <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
-            <a
-              href={whatsappUrl('Halo Haliyora, saya ingin bertanya tentang kelas.')}
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp <ArrowUpRight size={14} aria-hidden="true" />
-            </a>
-            <a href="#contact-links">Lokasi & kanal resmi</a>
-          </div>
+          <nav className="footer-column" aria-label="Jelajahi Haliyora">
+            <h2>Jelajahi</h2>
+            <ul>
+              <li><a href="#tentang">Tentang Haliyora</a></li>
+              <li><a href="#profil-company">Profil company</a></li>
+              <li><a href="#showcase">Alur belajar</a></li>
+              <li><a href="#testimoni">Cerita alumni</a></li>
+              <li><a href="#blog">Blog &amp; tips</a></li>
+            </ul>
+          </nav>
+          <nav className="footer-column" aria-label="Program belajar">
+            <h2>Program</h2>
+            <ul>
+              <li><a href="#program">Program belajar</a></li>
+              <li><a href="#paket">Paket belajar</a></li>
+              <li><a href="#promo">Promo</a></li>
+            </ul>
+          </nav>
+          <nav className="footer-column" aria-label="Informasi kontak">
+            <h2>Hubungi kami</h2>
+            <ul>
+              <li><a href={`mailto:${contactEmail}`}>{contactEmail}</a></li>
+              <li>
+                <a
+                  href={whatsappUrl('Halo Haliyora, saya ingin bertanya tentang kelas.')}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WhatsApp <ArrowUpRight size={14} aria-hidden="true" />
+                </a>
+              </li>
+              <li><a href="#contact-links">Lokasi & kanal resmi</a></li>
+            </ul>
+          </nav>
         </div>
         <div className="section-container footer-bottom">
-          <span>© {new Date().getFullYear()} Haliyora English Course. Seluruh hak cipta dilindungi.</span>
+          <span>
+            © {new Date().getFullYear()} Haliyora English Course. Seluruh hak
+            cipta dilindungi.
+          </span>
           <a href="#home">Kembali ke atas <ArrowUpRight size={14} aria-hidden="true" /></a>
         </div>
       </footer>
