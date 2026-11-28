@@ -10,6 +10,26 @@ Router, React, TypeScript, dan sistem desain CSS berbasis token.
 - CTA konsultasi WhatsApp, panel kode promo, kanal sosial, dan lokasi cabang.
 - Metadata SEO, navigasi mobile yang dapat diakses, serta dukungan reduced motion.
 
+## Stack Tech
+Stack utama Anda adalah **Next.js 14 dengan React 18 dan TypeScript**, menggunakan **App Router**. Komposisi bahasa GitHub mencatat HTML 94,7%, TypeScript 3,2%, dan CSS 2,1%; angka HTML yang dominan bisa mencerminkan markup JSX/TSX yang digunakan pada antarmuka.
+
+| Bagian | Teknologi yang digunakan |
+|---|---|
+| Framework frontend | Next.js `14.2.15`, dengan React `18.3.1` |
+| Bahasa | TypeScript dan JavaScript |
+| UI / rendering | React, Next.js App Router (`src/app`) |
+| Styling | CSS biasa melalui `src/app/globals.css` |
+| Animasi | GSAP `3.15.1` |
+| Grafis 3D | Three.js `0.182.0` dan React Three Fiber `8.18.0` |
+| Ikon | Lucide React |
+| Lint & pemeriksaan tipe | ESLint, `next lint`, dan TypeScript `tsc --noEmit` |
+| CI | GitHub Actions: lint, type-check, dan build; menggunakan Node.js 20 |
+| Optimasi gambar | Next.js Image remote pattern dikonfigurasi untuk `images.unsplash.com` |
+
+Bukti konfigurasi: [`package.json`](https://github.com/harrisariefkamis/Build-Webs-HEC/blob/4e6d608681cd29bffe25443c50882958b14a18d2/package.json), [`tsconfig.json`](https://github.com/harrisariefkamis/Build-Webs-HEC/blob/4e6d608681cd29bffe25443c50882958b14a18d2/tsconfig.json), [`next.config.js`](https://github.com/harrisariefkamis/Build-Webs-HEC/blob/4e6d608681cd29bffe25443c50882958b14a18d2/next.config.js), dan [workflow CI](https://github.com/harrisariefkamis/Build-Webs-HEC/blob/4e6d608681cd29bffe25443c50882958b14a18d2/.github/workflows/ci.yml).
+
+**Notes penting:** backend/API, database, autentikasi, atau layanan cloud seperti Supabase, MySQL, Redis, Firebase, maupun GCP. Vercel juga belum terkonfirmasi dari file yang diperiksa, jadi teknologi-teknologi tersebut sebaiknya disebut sebagai rencana integrasi saja—bukan bagian dari stack yang sudah digunakan.
+
 ## Menjalankan secara lokal
 
 **Prasyarat:** Node.js 20+ dan npm.
